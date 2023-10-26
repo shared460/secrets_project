@@ -23,13 +23,13 @@ server.use((req, res, next)=>{
 })
 
 server.get('/', (req, res) =>{
-    res.sendFile('/Users/sharadpoddar/Desktop/web2/secrets_project/src/index.html');
+    res.sendFile('/Users/sharadpoddar/Desktop/web2/secrets_project/index.html');
 })
 
 server.post('/secrets', (req,res)=>{
     console.log(req.body);
     if(authorisation){
-        res.sendFile('/Users/sharadpoddar/Desktop/web2/secrets_project/src/secrets.html');
+        res.sendFile('/Users/sharadpoddar/Desktop/web2/secrets_project/secrets.html');
         authorisation = false
     }else{
         //on failde of authorisation it will redirect to out home page
